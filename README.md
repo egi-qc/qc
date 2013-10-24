@@ -1,4 +1,2 @@
-qc
-==
-
 EGI Quality Criteria
+====================
