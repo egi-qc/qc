@@ -1,0 +1,39 @@
+<div class="criterion" id="{{ criterion.id }}">
+    <h3>{{ criterion.name }}</h3>
+    <dl class="dl-horizontal">
+        <dt>ID</dt><dd><code>{{ criterion.id }}</code>
+        <dt>Critical</dt>
+        {% if criterion.critical %}
+            <dd>{{ criterion.critical }}</dd>
+        {% else %}
+            <dd>False</dd>
+        {% endif %}
+        {% if criterion.desc %}
+            <dt>Description</dt>
+            <dd>{{ criterion.desc|markdown }}</dd>
+        {% endif %}
+        {% if criterion.passfail %}
+            <dt>What to check</dt>
+            <dd>{{ criterion.passfail|markdown }}</dd>
+        {% endif %}
+        {% if criterion.testing %}
+            <dt>Testing</dt>
+            <dd>{{ criterion.testing|markdown }}</dd>
+        {% endif %}
+        {% if criterion.report %}
+            <dt>What to report</dt>
+            <dd>{{ criterion.report|markdown }}</dd>
+        {% endif %}
+        {% if criterion.related %}
+            <dt>See also</dt>
+            <dd>{{ criterion.related|markdown }}</dd>
+        {% endif %}
+        {# Not really interesting to verifiers
+        {% if criterion.revision %}
+            <dt>Revision Log</dt>
+            <dd>{{ criterion.revision|markdown }}</dd>
+        {% endif %}
+        #} 
+    </dl>
+    <hr />
+</div>

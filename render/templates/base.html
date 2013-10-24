@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EGI Quality Criteria {{ release_id }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <style>
+ul.sidebar-navbar {
+    width: 180px;
+}
+.affix {
+    top: 20px;
+}
+    </style>
+</head>
+
+
+
+<body data-spy="scroll" data-target=".sidebar-navbar">
+    <header class="jumbotron">
+    <div class="container">
+        <h1>EGI QC {{ release_id }}</h1>
+        <p class="lead">{{intro_text|markdown}}</p>
+    </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 sidebar-navbar">
+                    <ul class="nav nav-list sidebar-navbar" data-spy="affix" data-offset-top="300">
+                        {% for s in generic %}
+                            <li><a href="#{{ s.id }}">{{ s.name }}</a></li>
+                        {% endfor %}
+                        <li class="divider"></li>
+                        {% for s in specific %}
+                            <li><a href="#{{ s.id }}">{{ s.name }}</a></li>
+                        {% endfor %}
+                    </ul>
+            </div><!--/.col-md-3-->
+            <div class="col-md-9">
+                {% for s in generic %}
+                    <section id="{{ s.id }}">
+                        <h2>{{ s.name }}</h2>
+                        {% for criterion in s.criteria %}
+                            {% include "criterion.html" %}
+                        {% endfor %}
+                    </section>              
+                {% endfor %}
+                {% for s in specific %}
+                    <section id="{{ s.id }}">
+                        <h2>{{ s.name }}</h2>
+                        {% for criterion in s.criteria %}
+                            {% include "criterion.html" %}
+                        {% endfor %}
+                    </section>              
+                {% endfor %}
+            </div><!--/.col-md-9-->
+        </div><!--/.row-->
+    </div><!--/.container-->
+
+  <script src="http://code.jquery.com/jquery.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+</body> 
+
+
+
