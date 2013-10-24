@@ -1,0 +1,85 @@
+- id: QC6_DOC_1
+  critical: True 
+  name: Release Notes
+  desc: | 
+    Products must provide release notes with:
+
+    * new features
+    * bug fixes
+    * any backward incompatible changes
+  passfail: Verifier must assure that the document exists and contains the 
+    requested information.
+  report: Include a link to the document in the report.
+  revision: Substitutes GENERIC_DOC_2
+
+- id: QC6_DOC_2
+  critical: True (for user-side services and tools)
+  name: User Documentation
+  desc: Products with client tools must provide documentation on its usage
+  passfail: Verifier must assure that the document exists. For any detected
+    flaws in the document, open a ticket with the issue.
+  report: Include a link to the document in the report.
+  revision: Substitutes GENERIC_DOC_3
+
+- id: QC6_DOC_3
+  critical: False 
+  name: API Documentation
+  desc: If the product provides a public API, it must be documented. The documentation should
+    cover all the existing public functionality of the API. If the product implements
+    a well-known or standard API (e.g. SRM), any missing functionality must be documented.
+  passfail: Verifier must assure that the API is documented.
+  report: Include a link to the document in the report.
+  revision: Substitutes GENERIC_DOC_5
+
+- id: QC6_DOC_4
+  critical: True 
+  name: Administrator Documentation
+  desc: |
+    Products must provide an administrator guide describing installation, configuration
+    and operation of the system. The document should contain the following information:
+
+    * description of services and daemons running
+    * init scripts and expected run levels
+    * configuration files
+    * list of log files
+    * open ports used by the product
+    * cron jobs used by the service
+  passfail: Verifier must assure that the document exists. For any detected
+    flaws in the document, open a ticket with the issue.
+  report: Include a link to the document in the report.
+  revision: Substitutes GENERIC_DOC_6 & GENERIC_DOC_7
+
+- id: QC6_DOC_5
+  critical: True 
+  name: Software License
+  revision: Substitutes GENERIC_DOC_8
+  desc: |
+    Products must have a compatible license for using them in the EGI Infrastructure.
+    For Open Source products, compatible licenses are those accepted by the Open Source
+    Initiative and categorized as _Popular and widely used or with strong communities_:
+
+    * Apache License, 2.0 (Apache-2.0)
+    * BSD 3-Clause "New" or "Revised" license (BSD-3-Clause)
+    * BSD 3-Clause "Simplified" or "FreeBSD" license (BSD-2-Clause)
+    * GNU General Public License (GPL)
+    * GNU Library or "Lesser" General Public License (LGPL)
+    * MIT license (MIT)
+    * Mozilla Public License 1.1 (MPL-1.1)
+    * Common Development and Distribution License (CDDL-1.0)
+    * Eclipse Public License (EPL-1.0)
+
+    Other licenses accepted by the Open Source Initiative and listed as _Special
+    Purpose_ are compatible with the infrastructure (when applicable):
+
+     * Educational Community License
+     * IPA Font License (IPA)
+     * NASA Open Source Agreement 1.3 (NASA-1.3)
+     * Open Font License 1.1 (OFL-1.1)
+
+    Any other license, and non Open Source products will be evaluated by the
+    verification team in coordination with the Operations Community.
+  passfail: License of the product must be one of the listed before.
+  report: Include the license type in the report.
+  related: "[Open Source Initiative Licenses by Category](http://www.opensource.org/licenses/category)"
+
+

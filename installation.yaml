@@ -1,0 +1,45 @@
+- id: QC6_DIST_1
+  critical: True
+  name: Binary Distribution
+  desc: |
+    Products must be available in the native packaging format of the supported
+    platform (RPM or DEB packages).
+  passfail: |
+    Packages must install without issues in a machine configured without any
+    external repositories (valid repositories are the standard OS repo, UMD
+    repo and EPEL repo for RH based distros)
+    
+    Packages must follow the OS policies (name of packages, use of filesystem
+    hierarchy, init scripts, ...). For any detected issue, open a ticket.
+    
+    Packages must be signed (or the repository where they are fetched from is
+    signed for Debian-based distros)
+  report: |
+    * <span class="label label-success">OK</span> for products installing without any dependencies
+      problems and using valid signatures.
+    * <span class="label label-warning">WARNING</span> for products that install correctly
+      but are not compliant with the distro guidelines (e.g. files in /opt)
+    * <span class="label label-danger">FAIL</span> in any other case.
+
+    yum/apt-get log can be included as appendix to the report.
+  related: |
+    * Verification reports from EMI release 1
+    * [RT #1357](https://rt.egi.eu/rt/Ticket/Display.html?id=1357)
+    * [GGUS #82417](https://ggus.eu/ws/ticket_info.php?ticket=82417)
+  revision: Substitutes GENERIC_DIST_3
+
+- id: QC6_UPGRADE_1
+  critical: False 
+  name: Upgrade 
+  desc: |
+    Non-major updates should be installable in a machine configured with
+    the previous version.
+  passfail: |
+    Verifier should update a working product with the verified version. The
+    update should not cause any problems. 
+  report: |
+    * <span class="label label-info">Not tested</span> if the installation was not an upgrade.
+    * <span class="label label-success">OK</span> for products updated without issues. 
+    * <span class="label label-danger">FAIL</span> in any other case.
+
+    yum/apt-get log can be included as appendix to the report.

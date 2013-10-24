@@ -1,0 +1,14 @@
+- id: QC6_SUPPORT_1
+  critical: True
+  name: Bug Tracking System
+  desc: |
+    Technology Providers must enrol in GGUS as 3rd level support for the products
+    verified by the Quality Assurance team of EGI. Any further integration with
+    TP-specific bug tracking software is entirely up to the Technology Provider.
+  passfail: Pass if Technology Provider enlisted as 3rd level support in GGUS.
+  report: |
+    * <span class="label label-success">OK</span> for products with support in GGUS. 
+    * <span class="label label-danger">FAIL</span> for any other case.
+  related: |
+    [GGUS](http://ggus.eu)
+  revision: Substitutes GENERIC_MISC_1

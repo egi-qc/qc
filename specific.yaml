@@ -1,0 +1,15 @@
+- id: QC6_FUNC_1
+  critical: YES
+  name: Basic Funcionality Test
+  desc: |
+    Verification must include basic functionality tests of the product that assures that
+    it performs its intended functionality.
+    These tests must focus on new features or fixed bugs of the release.
+    Proposed tests for the each product are available at the EGI wiki.
+  passfail: |
+    Pass if the proposed tests pass on the product. If there are no tests available yet,
+    pass if the basic functionality of the product is provided.
+  testing: |
+    See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_Quality_Criteria_Testing) for test
+    examples for each product.
+  revision: Substitutes GENERIC_SOFT_2
