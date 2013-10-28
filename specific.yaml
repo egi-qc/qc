@@ -4,12 +4,41 @@
   desc: |
     Verification must include basic functionality tests of the product that assures that
     it performs its intended functionality.
-    These tests must focus on new features or fixed bugs of the release.
-    Proposed tests for the each product are available at the EGI wiki.
   passfail: |
-    Pass if the proposed tests pass on the product. If there are no tests available yet,
-    pass if the basic functionality of the product is provided.
+    Verifier must configure the product and start its services in the verification testbed. 
+    If the verifier is not able to start the services, the TP should be contacted to clarify
+    any issues, opening GGUS tickets if neccesary.
+
+    Once the product is installed and running, the verifier should perform basic tests
+    to assert that its basic functionality is met. The quantity and level of detail of the tests
+    can be adjusted for each release (i.e. major releases should include more testing than minor
+    or revision releases.
+  report: |
+    Include in the report:
+
+     * what functionality was tested.
+     * if the tests were succesful or not.
+
+    If the product cannot be operated because of some missing functionality or major bugs,
+    set the product as rejected.
   testing: |
-    See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_Quality_Criteria_Testing) for test
+    See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Specific) for test
     examples for each product.
   revision: Substitutes GENERIC_SOFT_2
+
+- id: QC6_FUNC_2
+  critical: NO
+  name: New features/bug fixes testing. 
+  desc: |
+    Verification should check (whenever feasible) any new features and bug fixes included 
+    in the release.
+  passfail: |
+    Check the release notes of the products and test the relevant features and bug fixes included
+    in the release (if they are feasible to be tested within the verification testbed).
+    Take into account that the product will be also tested in Staged Rollout, if there are
+    changes that should be tested in a production environment notify state it clearly in the report.
+  report: |
+    Include in the report:
+
+     * what functionality was tested.
+     * if the tests were succesful or not.

@@ -2,17 +2,31 @@
   critical: YES
   name: Service Probes
   desc: |
-    TP must provide a (or a set of) monitoring probe that tests that the service
+    Services must be monitored by the monitoring infrastructure of EGI by using 
+    the public inerface of the service. The exact tests to perform for each
+    service are determined by the operations community. The product should work
+    with the existing probes for the service.
+
+    TP should provide a (or a set of) monitoring probe that tests that the service
     provides the expected functionality correctly that runs integrated in the
     monitoring infrastructure of EGI.
-    
-    The probe should only use the public interface of the service and the exact
-    tests to perform for each service are determined by the operations community. The
-    product should work with the existing probes for the service.
   passfail: |
-    * A probe for the product integrated in the EGI monitoring tools must exist
-    * New versions of the product must work with existing probes for the service. If
-    an update of the probe is required, it must follow the probe development policy.
+    If the product is already being tested in the verification testbed, check that the tests
+    pass OK. If the tests do not pass clarify the source of the problem (if it's a limitation
+    of the verification testbed, the criterion passes as WARNING).
+
+    If it's not being tested, contact the verifiers mailing list to configure the Nagios machine.
+
+    If there there are no tests for the product, do also contact the verifiers mailing list to
+    decide on the result of the verification.
+
+  report: |
+    * <span class="label label-success">OK</span> product is checked in the testbed
+      Nagios and passes all tests.
+    * <span class="label label-warning">WARNING</span> There are no tests for the 
+    product, or some tests do not pass due to limitations of the verification testbed.
+    * <span class="label label-danger">FAIL</span> product is checked in the testbed
+      and one or more Nagios tests fail due to changes in the product.
   related: |
     * [SAM Probes Documentation](https://tomtools.cern.ch/confluence/display/SAM/Probes)
     * [SAM](https://wiki.egi.eu/wiki/SAM)
@@ -28,8 +42,13 @@
     
     These records must be transmitted to the EGI central database periodically.
   passfail: |
-    Pass if the accounting records are generated correctlyi and transmitted to
-    the central EGI accouting database.
+    Execute some jobs and force the generation and transmission of records. Check that 
+    there are as many records as job sumitted and that the transmission was started.
+  report: |
+    * <span class="label label-success">OK</span> Accounting records are created and sent to
+     the EGI central database.
+    * <span class="label label-danger">FAIL</span> The accounting records are not created.
+    * <span class="label label-info">NA</span> For products that do not execute jobs. 
   related: |
     * [EGI Accounting](https://wiki.egi.eu/wiki/Accounting)
     * [APEL](https://wiki.egi.eu/wiki/APEL)
