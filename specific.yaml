@@ -1,4 +1,4 @@
-- id: QC6_FUNC_1
+- id: QC_FUNC_1
   critical: YES
   name: Basic Funcionality Test
   desc: |
@@ -22,11 +22,11 @@
     If the product cannot be operated because of some missing functionality or major bugs,
     set the product as rejected.
   testing: |
-    See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Specific) for test
+    See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Specific) for test
     examples for each product.
   revision: Substitutes GENERIC_SOFT_2
 
-- id: QC6_FUNC_2
+- id: QC_FUNC_2
   critical: NO
   name: New features/bug fixes testing. 
   desc: |

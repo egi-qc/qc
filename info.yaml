@@ -1,10 +1,10 @@
-- id: QC6_INFO_1
+- id: QC_INFO_1
   critical: False 
   name: GlueSchema 1.3 Support
   desc:
     Resource information exchanged in the EGI Infrastructure must conform to GlueSchema v1.3
   passfail: Verifier must run glue validator to check GlueSchema 1.3 conformance.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for information on
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for information on
     running the validator and list of allowed issues.
   report: |
     * <span class="label label-success">OK</span> for glueschema compliant products. 
@@ -16,7 +16,7 @@
     * [Glue Validator](https://tomtools.cern.ch/confluence/display/IS/GLUEValidator)
   revision: Substitutes INFOMODEL_SCHEMA_1
 
-- id: QC6_INFO_2
+- id: QC_INFO_2
   critical: True
   name: GlueSchema 2.0 Support
   desc:
@@ -34,14 +34,14 @@
     * [Glue Validator](https://tomtools.cern.ch/confluence/display/IS/GLUEValidator)
   revision: Substitutes INFOMODEL_SCHEMA_1
 
-- id: QC6_INFO_3
+- id: QC_INFO_3
   critical: False
   name: Middleware Version Information
   desc: 
     Resource information published by Information Discovery Appliances must
     include the middleware version of the middleware 
   passfail: Verifier runs a query to check the middleware version.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for information on
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for information on
     example queries.
   report: |
     * <span class="label label-success">OK</span> for products that publish their version. 

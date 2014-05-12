@@ -1,4 +1,4 @@
-- id: QC6_DOC_1
+- id: QC_DOC_1
   critical: True 
   name: Release Notes
   desc: | 
@@ -12,7 +12,7 @@
   report: Include a link to the document in the report.
   revision: Substitutes GENERIC_DOC_2
 
-- id: QC6_DOC_2
+- id: QC_DOC_2
   critical: True (for user-side services and tools)
   name: User Documentation
   desc: Products with client tools must provide documentation on its usage
@@ -21,7 +21,7 @@
   report: Include a link to the document in the report.
   revision: Substitutes GENERIC_DOC_3
 
-- id: QC6_DOC_3
+- id: QC_DOC_3
   critical: False 
   name: API Documentation
   desc: If the product provides a public API, it must be documented. The documentation should
@@ -31,7 +31,7 @@
   report: Include a link to the document in the report.
   revision: Substitutes GENERIC_DOC_5
 
-- id: QC6_DOC_4
+- id: QC_DOC_4
   critical: True 
   name: Administrator Documentation
   desc: |
@@ -49,7 +49,7 @@
   report: Include a link to the document in the report.
   revision: Substitutes GENERIC_DOC_6 & GENERIC_DOC_7
 
-- id: QC6_DOC_5
+- id: QC_DOC_5
   critical: True 
   name: Software License
   revision: Substitutes GENERIC_DOC_8

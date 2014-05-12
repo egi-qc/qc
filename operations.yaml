@@ -1,4 +1,4 @@
-- id: QC6_MON_1
+- id: QC_MON_1
   critical: YES
   name: Service Probes
   desc: |
@@ -32,7 +32,7 @@
     * [SAM](https://wiki.egi.eu/wiki/SAM)
   revision: Substitutes MON_PROBE_*
 
-- id: QC6_ACC_1
+- id: QC_ACC_1
   critical: YES
   name: Accounting Records
   desc: |

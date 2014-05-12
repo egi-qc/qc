@@ -1,4 +1,4 @@
-- id: QC6_SEC_1
+- id: QC_SEC_1
   critical: True (for products requiring authentication)
   name: X.509 Certificate support
   desc: Primary authentication token within the infrastructure is the X.509 certificate
@@ -10,14 +10,14 @@
     * <span class="label label-danger">FAIL</span> in any other case.
   revision: Substitutes AUTHN_CRED_1
 
-- id: QC6_SEC_2
+- id: QC_SEC_2
   critical: True
   name: SHA-2 Certificates Support
   desc: Certificates and proxies generatec with SHA-2 cryptographic hash funtions
     must be supported by the middleware
   passfail: Verification must be performed with SHA-2 certificates for the service and
     for clients.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for more information on 
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for more information on 
     SHA-2 certificates.
   report: |
     * <span class="label label-success">OK</span> for products able to use SHA-2 certificates.
@@ -26,20 +26,20 @@
     [RT #3078](https://rt.egi.eu/rt/Ticket/Display.html?id=3078)
   revision: Substitutes AUTHN_CRED_2
 
-- id: QC6_SEC_3
+- id: QC_SEC_3
   critical: False
   name: RFC Proxy support
   desc: All middelware using proxies must accept RFC proxies as credential tokens for authentication
   passfail: Verification must be performed using a RFC proxy. Such proxy can be obtained with the
     `-rfc` option of `voms-proxy-init`.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for more information on 
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for more information on 
     RFC proxies.
   report: |
     * <span class="label label-success">OK</span> for products able to use RFC proxies.
     * <span class="label label-warning">WARNING</span> in any other case.
   revision: Substitutes AUTHN_CRED_3
 
-- id: QC6_SEC_4
+- id: QC_SEC_4
   critical: False
   name: ARGUS Integration
   desc: All services requiring authorization should be able to use an external ARGUS
@@ -47,7 +47,7 @@
   passfail: Verifier configures an external ARGUS service for the product being verified.
     Test a banning policy and a allowed policy to the resource. Check that the policies are
     enforced.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for using the ARGUS service
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for using the ARGUS service
     of the verification testbed for this test.
   report: |
     * <span class="label label-success">OK</span> for products that apply correctly the banning 
@@ -57,7 +57,7 @@
     [ARGUS Authorization Service](https://twiki.cern.ch/twiki/bin/view/EGEE/AuthorizationFramework)
   revision: Substitutes AUTHZ_ PEP_3
 
-- id: QC6_SEC_5
+- id: QC_SEC_5
   critical: True
   name: World Writable Files
   desc: World-writable files and directories are dangerous since they allows anyone
@@ -69,7 +69,7 @@
     files or directories. If any world-writable files are required for the normal operation
     of the service, these should be documented by the Techonology Provider, a ticket reporting
     the files must be opened. Logs and config files must not be world-writable.
-  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC6_Testing) for example test.
+  testing: See [EGI QC wiki](https://wiki.egi.eu/wiki/EGI_QC_Testing) for example test.
   report: |
     * <span class="label label-success">OK</span> for products without world-writabble files
     * <span class="label label-warning">WARNING</span> for products with world-writabble files required for operation and documented.

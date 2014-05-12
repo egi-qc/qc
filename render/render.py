@@ -12,8 +12,8 @@ env = Environment(loader=FileSystemLoader('templates'))
 env.filters['markdown'] = markdown_filter
 
 
-release_id = '6'
-intro_text = ("This page describes the 6th release of the EGI Quality "
+release_id = '8 draft 1'
+intro_text = ("This page describes the 8th release of the EGI Quality "
               "Criteria (QC), that is used for verification of software "
               "products. These QC drive the Software Verification in "
               "[EGI Software Provision](https://wiki.egi.eu/wiki/"

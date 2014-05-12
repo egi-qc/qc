@@ -1,4 +1,4 @@
-- id: QC6_DIST_1
+- id: QC_DIST_1
   critical: True
   name: Binary Distribution
   desc: |
@@ -28,7 +28,7 @@
     * [GGUS #82417](https://ggus.eu/ws/ticket_info.php?ticket=82417)
   revision: Substitutes GENERIC_DIST_3
 
-- id: QC6_UPGRADE_1
+- id: QC_UPGRADE_1
   critical: False 
   name: Upgrade 
   desc: |
